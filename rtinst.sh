@@ -683,19 +683,19 @@ git clone https://github.com/autodl-community/autodl-rutorrent.git autodl-irssi 
 
 mkdir /var/www/rutorrent/conf/users/$user/plugins/autodl-irssi
 
-touch /var/www/rutorrent/conf/users/$user/plugins/autodl-irssi/conf.php
+touch /var/www/rutorrent/conf/users/$user/plugins/autodl-irssi/_conf.php
 
-echo "<?php" > /var/www/rutorrent/conf/users/$user/plugins/autodl-irssi/conf.php
-echo >> /var/www/rutorrent/conf/users/$user/plugins/autodl-irssi/conf.php
-echo "\$autodlPort = $adlport;" >> /var/www/rutorrent/conf/users/$user/plugins/autodl-irssi/conf.php
-echo "\$autodlPassword = \"$adlpass\";" >> /var/www/rutorrent/conf/users/$user/plugins/autodl-irssi/conf.php
-echo >> /var/www/rutorrent/conf/users/$user/plugins/autodl-irssi/conf.php
-echo "?>" >> /var/www/rutorrent/conf/users/$user/plugins/autodl-irssi/conf.php
+echo "<?php" > /var/www/rutorrent/conf/users/$user/plugins/autodl-irssi/_conf.php
+echo >> /var/www/rutorrent/conf/users/$user/plugins/autodl-irssi/_conf.php
+echo "\$autodlPort = $adlport;" >> /var/www/rutorrent/conf/users/$user/plugins/autodl-irssi/_conf.php
+echo "\$autodlPassword = \"$adlpass\";" >> /var/www/rutorrent/conf/users/$user/plugins/autodl-irssi/_conf.php
+echo >> /var/www/rutorrent/conf/users/$user/plugins/autodl-irssi/_conf.php
+echo "?>" >> /var/www/rutorrent/conf/users/$user/plugins/autodl-irssi/_conf.php
 
 cd $home/.autodl
-echo "[options]" > autodl2.cfg
-echo "gui-server-port = $adlport" >> autodl2.cfg
-echo "gui-server-password = $adlpass" >> autodl2.cfg
+echo "[options]" > autodl.cfg
+echo "gui-server-port = $adlport" >> autodl.cfg
+echo "gui-server-password = $adlpass" >> autodl.cfg
 
 # set permissions
 echo "Setting permissions, Starting services" | tee -a $logfile
